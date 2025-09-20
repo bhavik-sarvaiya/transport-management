@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Transport Management Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚌 Student Transport Management System</h1>
+            <p>Demo Application</p>
+        </header>
+
+        <!-- Login Section -->
+        <div id="loginSection" class="section">
+            <div class="card">
+                <h2>Student Login</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="studentId">Student ID:</label>
+                        <input type="text" id="studentId" name="studentId" placeholder="e.g., STU001" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="studentName">Student Name:</label>
+                        <input type="text" id="studentName" name="studentName" placeholder="Enter your name" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Dashboard Section -->
+        <div id="dashboardSection" class="section hidden">
+            <div class="welcome-card">
+                <h2>Welcome, <span id="welcomeName"></span>!</h2>
+                <p>Student ID: <span id="welcomeId"></span></p>
+            </div>
+
+            <div class="dashboard-grid">
+                <!-- Routes Section -->
+                <div class="card">
+                    <h3>📍 Available Routes</h3>
+                    <div id="routesList" class="routes-list">
+                        <!-- Routes will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Schedule Section -->
+                <div class="card">
+                    <h3>🕒 Today's Schedule</h3>
+                    <div id="scheduleList" class="schedule-list">
+                        <!-- Schedule will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Booking Section -->
+                <div class="card">
+                    <h3>🎫 Book Transport</h3>
+                    <form id="bookingForm">
+                        <div class="form-group">
+                            <label for="routeSelect">Select Route:</label>
+                            <select id="routeSelect" name="routeSelect" required>
+                                <option value="">Choose a route...</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="timeSelect">Select Time:</label>
+                            <select id="timeSelect" name="timeSelect" required>
+                                <option value="">Choose time...</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="bookingDate">Date:</label>
+                            <input type="date" id="bookingDate" name="bookingDate" required>
+                        </div>
+                        <button type="submit" class="btn btn-success">Book Now</button>
+                    </form>
+                </div>
+
+                <!-- My Bookings Section -->
+                <div class="card">
+                    <h3>📋 My Bookings</h3>
+                    <div id="myBookings" class="bookings-list">
+                        <p class="no-bookings">No bookings yet. Book your first ride!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="logout-section">
+                <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
