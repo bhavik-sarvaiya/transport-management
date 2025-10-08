@@ -107,6 +107,7 @@ public class EditUserServlet extends HttpServlet {
 						+ row.getString(6) + ">" + "  </div>" + " <div class=\"mb-3\">"
 						+ "    <input type=\"hidden\" class=\"form-control\" id=\"loginid\" name= \"loginid\" value= "
 						+ sessionLoginId + ">"
+
 						+ "    <input type=\"hidden\" class=\"form-control\" id=\"userId\" name= \"userId\" value= "
 						+ userId + ">" + "  </div>"
 						+ "  <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\r\n" + "</form>");
